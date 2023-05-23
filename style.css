@@ -1,0 +1,88 @@
+/* Place your CSS styles in this file */
+
+body{
+    background: hsl(247, 64%, 79%);
+}
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    color: rgb(233, 48, 159);
+    width:60%;
+    margin-left: 250px;
+        
+}
+
+h2 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    color: black;
+    width:60%;
+    margin-left: 250px;
+   
+    
+}
+h3{
+    color: rgb(21, 21, 195);
+    font-size: larger;
+}
+form{
+    
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 7px;
+    max-width: 600px;
+    border-radius: 7px;
+}
+
+label{
+    
+    padding:20px;
+    padding-right: 10px;
+    color:rgb(3, 3, 28);
+    font-size: large;
+}
+
+ .field1 {
+ width:100px;
+ margin-left: 100px;
+
+}
+
+form select {
+    
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+    width:45%;
+ 
+}
+form input {
+    
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 12px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+    width:40%;
+
+}
+form button {
+    padding: 10px;
+    background: green;
+    border: 0;
+    color: white;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    width: 100px;
+    align-items: center;
+    margin-left: 200px;
+}

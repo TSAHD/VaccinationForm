@@ -1,0 +1,224 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><b>Vaccination Entry Form</b></title>
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="style.css">
+         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+     </head>
+
+<body>
+  
+	<h1><center><b> TS Veterinary and Animal Husbandry </B> </center> </h1>
+		<h2><center><b>  Vaccination Entry Form - 2023</B> </center> </h2>
+	
+        <form name="google-sheet"  method="POST" autocomplete="off" > 
+
+  	<div class="field" > 
+		<label for="dateV"><b>Date of Vaccination: </b></label>
+		<input type="date" id="DateV" name="DateV" placeholder="Enter Date of Vaccination"  required/>
+		<small></small>
+	</div> <br> 
+	
+	<div class="wrapper">
+		<label > <b> District Name :  </b></label>
+		<select id="parent_select" name="District" class ="parent_select">
+		</select>
+		
+		<div class="field">
+        <label > <b> Mandal Name  :  </b></label>
+	        <select id="child_select" name ="Mandal" ></select>
+        </div>
+		
+         <div class="field">
+			        <label > <b>Village Name    :  </b></label>
+	                <input type="TEXT" id="Village"  name="Village" placeholder="Enter village name" required/>
+		            <small></small>
+		</div><br> 
+
+	<div class="field">
+		<label for="Fname"><b>Farmer Name    : </b></label>
+		<input type="text" id="name" name="Fname" placeholder="Enter farmer name" required/>
+		
+	</div><br> 
+		
+	<div class="field">
+		<label for="phone"><b>Farmer's Contact No: </b></label>
+		<input type="tel" id="phone" name="phone" 
+   			 pattern="[1-9]{1}[0-9]{9}" 
+   			 placeholder="Enter your 10 digit phone Number" required/>
+		
+	</div><br> 
+
+	<div class="field">
+		<label for="caste"> <b>   Caste / Social Status   :  </b></label>
+		<select name='caste' id='caste' class='caste'>
+			<option value="OC">OC</option>
+		    <option value="BC">BC</option>
+			<option value="SC">SC</option>
+		    <option value="ST">ST</option>
+			<option value="others">others</option>
+		  
+	   </select>
+     </div><br> 
+	
+	 
+	<div class="field">
+		<label for="kind of animal vaccinated"> <b> Kind of Animal Vaccinated :  </b></label>
+		<select name='animaltype' id='animaltype' class='animaltype'>
+			<option value="Cattle">Cattle</option>
+		    <option value="Buffalo">Buffalo</option>
+			<option value="Sheep">Sheep</option>
+		    <option value="Goat">Goat</option> 
+	   </select>
+     </div><br>
+ 	
+
+	 
+	<div class="field">
+		<label for="vaccinename"> <b> Name of Vaccination  Done  :  </b></label>
+		<select name='vaccinename' id='vaccinename' class='vaccinename'>
+			<option value="HS">HS</option>
+		    <option value="BQ">BQ</option>
+			<option value="LSD">LSD</option>
+		    <option value="ET">ET</option> 
+			<option value="Sheeppox">SHEEPPOX</option>
+		    <option value="Goatpox">GOATPOX</option> 
+	   </select>
+     </div><br> 
+
+
+	 <div class="field">
+		<label for="Cnumber"><b>Vaccination's done in CATTLE   :</b></label>
+		<input type="number" id="CattleNo" min=0 max=10000 name="CattleNo" placeholder="Enter Cattle vaccination number" required/>
+		<small></small>
+	</div><br>
+	 
+		
+	<div class="field">
+		<label for="Bnumber"><b>Vaccination's done in BUFFALO:</b></label>
+		<input type="number" id="BuffaloNo" min=0 max=10000 name="BuffaloNo" placeholder="Enter Buffalo vaccine's number" required/>
+		<small></small>
+	</div><br> 
+
+
+	
+	<div class="field">
+		<label for="Snumber"><b>Vaccination's done in  SHEEP    :</b></label>
+		<input type="number" id="SheepNo" min=0 max=10000 name="SheepNo" placeholder="Enter sheep vaccination number" required/>
+		<small></small>
+	</div><br> 
+
+	
+	<div class="field">
+		<label for="Gnumber"><b>Vaccination's done in  GOAT     :</b></label>
+		<input type="number" id="GoatNo" min=0 max=10000 name="GoatNo" placeholder="Enter goat vaccination number" required/>
+		<small></small>
+	</div><br> 
+
+
+
+
+		<div class="field">
+	        	<label for="Ename"> <b>Reporting Officer : </b></label>
+		         <input type="text" id="Ename" name="Ename" placeholder="Enter Reporting Officer Name" required/>
+		          <small></small>
+		</div><br> 
+
+         <div class="field">
+			<label > <b>  Designation     :            </b></label>
+			<select name="Designation">
+				<option value="ad"> AD </option>
+ 			    <option value="vas">VAS</option>
+			    <option value="vlo">VLO</option>
+ 			    <option value="jvo">JVO</option>
+			    <option value="lsa">LSA</option>
+   			    <option value="va">VA</option>
+    			
+            </select>
+		 </div><br>
+
+
+		<button type="submit" name="submit">Submit</button>
+  
+</form>
+
+<script language="javascript" type="text/javascript">  
+      var mList = {
+		
+	 ADILABAD:['ADILABAD RURAL','ADILABAD URBAN','BAZARHATNOOR','Bela','BHEEMPUR','Boath','GADIGUDA','GUDIHATNOOR','Ichoda','Inderavelly','JAINATH','MAVALA','Narnoor','Neradigonda','SIRIKONDA','Talamadugu','Tamsi','Utnoor'],
+        'BHADRADRI KOTHAGUDEM' :  ['Allapalli','Annapureddypalli','Aswapuram','Aswaraopeta','Bhadrachalam','Burgampahad','Chandrugonda','Cherla','Chunchupalli','Dammapeta','Dummugudem','Gundala','Julurpadu',
+                  'Karakagudem','Kothagudem','Laxmidevipalli','Manuguru','Mulkalapally','Palvoncha','Pinapaka','Sujathanagar','Tekulapalli','Yellandu'],
+        HANUMAKONDA:  ['Athmakur','Bheemadevarpalli','Damera','Dharmasagar','Elkathurthy','Hanamkonda','Hasanparthy','Inavole','Kamalapur','Khazipet','NADIKUDA','Parkal','Shayampet','Velair'],
+	HYDERABAD:  ['Amberpet','Ameerpet','Asif Nagar','Bahadurpura','Bandlaguda','Charminar','Golconda','Himayatnagar','Khairatabad','Marredpally','Musheerabad','Nampally','Saidabad','Secunderabad','Shaikpet','Tirumalgiri'],
+        JAGITIAL:['Beerpur','Buggaram','Bhimaram','Dharmapuri','Gollapalli','Ibrahimpatnam','Jagitial','Jagitial Rural','Kathlapur','Kodimial','Korutla','Mallapur','Mallial','Medipalli','Metpalli','Pegadapalli','Raikal','Sarangapur','Velgatur','Yendapally'],
+        JANGOAN:['Bachannapet','Chilpur','Devaruppula','Ghanpur (Station)','Jangoan','Kodakandla','LingalaGhanpur','Narmetta','Palakurthy','Ragunathpally','Tharigoppula','Zaffergadh'],
+        'JAYASHANKAR BHUPALAPALLY'   :['Bhupalpally','Chityal','Ghanpur (Mulug)','Kataram','Mahadevpur','Malharrao','Mogullapally','MUTHARAM MAHADEVPUR','Palimela','Regonda','Tekumatla'],
+ 	'JOGULAMBA GADWAL':['Alampur','Dharoor','Gadwal','Ghattu','Ieeja','Itikyala','Kaloor Thimmandoddi','Maldakal','Manopad','Rajoli','Undavelly','Waddepally'],
+ 	KAMAREDDY:['Banswada','Bhiknoor','Bibipet','Bichkunda','Birkur','Domakonda','Dongli','Gandhari','Jukkal','Kamareddy','Lingampet','Machareddy','Madnoor','Nagireddypet','Nasurullabad','Nizamsagar','Pedda Kodapgal','Pitlam','Rajampet','Ramareddy','Sadashivanagar','Tadwai','Yellareddy'],
+ 	KARIMNAGAR:['Chigurumamidi','Choppadandi','Ellandakunta','Gangadhara','Ganneruvaram','Huzurabad','Jammikunta','Karimnagar','Karimnagar Rural','Kothapally','Manakondur','Ramadugu','Shankarapatnam','Thimmapur LMD','Veenavanka','V.Saidapur'],
+	 KHAMMAM:['Bonaka','Chinthakani','Enkoor','Kalluru','Kamepalli','Khammam Rural','Khammam Urban','Konijerla','Kusumanchi','Madhira','Mudigonda','Nelakondapalli','Penuballi','Raghunadhapalem','Sathupalli','Singareni','Thallada','Tirumalayapalem','Vemsoor','Wyra','Yerrupalem'],
+	 'KUMURAMBHEEM ASIFABAD' :['Asifabad','Bejjur','Chintalamanepally','Dahegoan','Jainoor','Kagaznagar','Kerameri','Koutala','Lingapur','Penchicalpet','Rebbena','Sirpur T','Sirpur U','Tiryani','Wankidi'],
+	 MAHABUBABAD:['Bayyaram','Chinnagudur','Danthalapalle','Dornakal','Gangaram','Garla','Gudur','Inugurthy','Kesamudram','Kothaguda','Kuravi','Mahabubabad','Maripeda','Narsimhulapet','Nellikudur','Peddavangara','Thorrur','Sirole'],
+	 MAHABUBNAGAR:['Addakal','Balanagar','Bhoothpur','Chinnachintakunta','Devarakadra','Gandeed','Hanwada','Jadcherla','Koilkonda','Koukuntla','Mahabubnagar Rural','Mahabubnagar Urban','Midjil','Mohammadabad','Moosapet','Nawabpet','Rajapur'],
+	 MANCHERIAL:['Bellampally','Bheemaram','Bheemini','Chennur','Dandepally','Hajipur','Jaipur','Jannaram','Kannepally','Kasipet','Kotapally','Luxettipet','Mancherial','Mandamarri','Naspur','Nennel','Tandur','Vemanpally'],
+	MEDAK:['Alladurg','Chegunta','Chilpched','Havelighanapur','Kowdipally','Kulcharam','Manoharabad','Masaipet','Medak','Narsapur','Narsingi','Nizampet','Papannapet','Ramayampet','Regode','Shankarampet A','Shankarampet R','Shivampet','Tekmal','Toopran','Yeldurthy'],
+ 	'MEDCHAL MALKAJGIRI':['Alwal','Bachupally','Balanagar','Gandimaisamma Dundigal','Ghatkesar','Kapra','Keesara','Kukatpally','Malkajgiri','Medchal','Medipally','Muduchinthalapally','Qutballapur','Shamirpet','Uppal'],
+ 	MULUGU:['Eturunagaram','Govindaraopet','Kannaigudem','Mangapet','Mulug','Tadvai','Venkatapur','Venkatapuram','Wajedu'],
+	 NAGARKURNOOL:['Achampet','Aabad','Balmoor','Bijinapally','Charakonda','Kalwakurthy','Kodair','Kollapur','Lingal','Nagarkurnool','Padara','Peddakothapally','Pentlavelli','Tadoor','Telkapally','Thimmajipet','Uppununthala','Urkonda','Vangoor','Veldanda'],
+	NALGONDA:['Adavidevulapalli','Anumula','ChandamPeta','Chandur','ChinthaPally','Chityal','Dameracherla','Devarakonda','Gattuppal','GundlaPally','Gurrampode','Kanagal','Kattangur','KethePally','Kondamallepally','Madugulapally','Marriguda','Miryalaguda','Munugode','Nakrekal','Nalgonda','Nampally','Narketpally',
+		'Neredugommu','Nidmanoor','Pedda Adesherlapally','Peddavoora','ShaliGouraram','Thipparthy','Tirumalagiri Sagar','Tripuraram','Vemulapally'],
+	NARAYANPET:['Damargidda','Dhanwada','Kosgi','Krishna','Maddur','Maganoor','Makthal','Marikal','Narayanpet','Narwa','Utkoor'],
+	NIRMAL:['Basar','Bhainsa','Dasturabad','Dilawarpur','Kaddam Peddur','Khanapur','Kubeer','Kuntala','Laxmanchanda','Lokeswaram','Mamada','Mudhole','Narsapur G','Nirmal Rural','Nirmal U','Pembi','Sarangapur','Soan','Tanoor'],
+	NIZAMABAD:['Alur','Armoor','Balkonda','Bheemgal','Bodhan','Chandur','Dharpally','Dichpally','Donkeswar','Indalwai','Jakranpally','Kammarpally','Kotagiri','Makloor','Mendora','Morthad','Mosara','Mugpal',
+		'Mupkal','Nandipet','Navipet','Nizamabad North','Nizamabad Rural','NIZAMABAD SOUTH','Renjal','Rudrur','Salura','Sirikonda','Vailpoor','Varni','Yedapally','Yergatla'],
+	PEDDAPALLI:['ANTHERGAON','Dharmaram','Eligaid','Julapalli','Kamanpur','Manthani','Mutharam Manthani','Odela','PALAKURTHY','Peddapalli','RAMAGIRI','Ramagundam','Srirampur','Sulthanabad'],
+	'RAJANNA SIRCILLA':['Boinpalli','Chandurthi','Gambhiraopet','Illanthakunta','Konaraopet','Mustabad','RUDRANGI','Sircilla','THANGALLAPALLI','VEERNAPALLI','Vemulawada','VEMULAWADA RURAL','Yellareddipet'],
+	RANGAREDDY:['Abdullapurmet','Amangal','Balapur','Chevella','Farooqnagar','Gandipet','Hayathnagar','Ibrahimpatnam','JILLED CHOWDERGUDEM','Kadthal','Kandukur','Keshampet','Kondurg','Kothur','Madgul','Maheshwaram','Manchal','Moinabad','Nandigama','Rajendranagar','Saroornagar','Serilingampally','Shabad','Shamshabad','Shankarpalle','Thalakondapally','Yacharam'],
+	SANGAREDDY:['Ameenpur','Andole','Chowtakur','Gummadidala','Hathnoora','Jharasangam','Jinnaram','Kalher','Kandi','Kangti','Kohir','Kondapur','Manoor','Mogudampally','Munipally','Nagalgidda','Narayankhed','Nizampet','Nyalkal','Patancheru','Pulkal','Raikode','Ramchandrapuram','Sadasivpet','Sangareddy','Sirgapoor','Vatpally','Zahirabad'],
+	SIDDIPET:['Akberpet-Bhumpally','Akkannapet','Bejjanki','Cherial','Chinnakodur','Dhoolmitta','Doultabad','Dubbak','Gajwel','Husnabad','Jagdevpur','Koheda','Komuravelli','Kondapak','Kukunurupalli','Maddur','Markook','Mirdoddi','Mulug','Nangnoor','Narayanaraopet','Raipole','Siddipet Rural','Siddipet Urban','Thoguta','Wargal'],
+	SURYAPET:['Ananthagiri','Atmakur S','Chilkur','Chinthalapalem','Chivemla','GaridePally','Huzurnagar','JajiReddyGudem','Kodad','Maddirala','MattamPally','MellaChervu','Mothey','Munagala','Nadigudem','Nagaram','Nereducherla','Nuthanakal','Palakeedu','Penpahad','Suryapet','Thirumalagiri','Thungaturthy'],
+	VIKARABAD:['Bantwaram','Basheerabad','Bomaraspeta','Chowdapur','Dharur','Doma','Doulathabad','Kodangal','Kotepally','Kulkacharla','Marpalle','Mominpet','Nawabpet','Pargi','Peddemul','Pudur','Tandur','Vikarabad','Yelal'],
+	WANAPARTHY:['Amarchintha','Atmakur','Chinnambavi','Ghanpur','Gopalpeta','Kothakota','Madanapur','Pangal','Pebbair','Peddamandadi','Revally','Srirangapur','Wanaparthy','Weepangandla'],
+	WARANGAL:['Chennaraopet','Duggondi','Geesugonda','Khanapur','Khila Warangal','Nallabelli','Narsampet','Nekkonda','Parvathagiri','Rayaparthy','Sangem','Warangal','Wardhannapet'],
+	'YADADRI BHUVANAGIRI':['Adda Guduru','Alair','Atmakur M','Bhongir','Bibinagar','Bommalaramaram','B Pochampally','Choutuppal','Gundala','Motakonduru','Mothkur','Narayanpur','Rajapeta','Ramannapet','Thurkapally','Valigonda','Yadagirigutta']
+        };
+
+	el_parent = document.getElementById("parent_select");
+	el_child = document.getElementById("child_select");
+ 
+	for (key in mList) {
+			el_parent.innerHTML = el_parent.innerHTML + '<option>'+ key +'</option>';
+			}
+ 
+	el_parent.addEventListener('change', function populate_child(e){
+				el_child.innerHTML = '';
+				item = e.target.value;
+				if(item in mList){
+					for (i = 0; i < mList[item].length; i++) {
+					el_child.innerHTML = el_child.innerHTML + '<option>'+ mList[item][i] +'</option>';
+					}
+					}
+				});
+
+	</script>
+
+	<script>
+            const scriptURL = 
+			"https://script.google.com/macros/s/AKfycbwrDgO2ui-aS_eh3Tvs6X70v2-c-T9_mzaSJAfhZ-ZNXM3EZtjurFC3JQoiUG8OA5mJ/exec"
+                    const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+             		 e.preventDefault()
+             		 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              				  .then(response => alert("Thanks for Contacting us..! Your Data is submitted..."))
+              				  .catch(error => console.error('Error!', error.message))
+					    e.target.reset();
+           				 })
+          </script>
+
+    </body>
+
+</html>
