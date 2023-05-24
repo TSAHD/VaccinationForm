@@ -14,11 +14,11 @@
 	<h1><center><b> TS Veterinary and Animal Husbandry </B> </center> </h1>
 		<h2><center><b>  Vaccination Entry Form - 2023</B> </center> </h2>
 	
-        <form name="google-sheet"  method="POST" autocomplete="off" > 
+<form name="google-sheet"  method="POST" autocomplete="off" > 
 
   	<div class="field" > 
 		<label for="dateV"><b>Date of Vaccination: </b></label>
-		<input type="date" id="DateV" name="DateV" placeholder="Enter Date of Vaccination"  required/>
+		<input type="date" id="DateV" name="DateV" class='vaccineDate' placeholder="Enter Date of Vaccination"  required/>
 		<small></small>
 	</div> <br> 
 	
@@ -29,26 +29,26 @@
 		
 		<div class="field">
         <label > <b> Mandal Name  :  </b></label>
-	        <select id="child_select" name ="Mandal" ></select>
+	        <select id="child_select" name ="Mandal" class ='child_select' ></select>
         </div>
 		
          <div class="field">
 			        <label > <b>Village Name    :  </b></label>
-	                <input type="TEXT" id="Village"  name="Village" placeholder="Enter village name" required/>
+	                <input type="TEXT" id="Village" class='village' name="Village" placeholder="Enter village name" required/>
 		            <small></small>
 		</div><br> 
 
 	<div class="field">
 		<label for="Fname"><b>Farmer Name    : </b></label>
-		<input type="text" id="name" name="Fname" placeholder="Enter farmer name" required/>
+		<input type="text" id="name" class='farmer' name="Fname" placeholder="Enter farmer name" required/>
 		
 	</div><br> 
 		
 	<div class="field">
 		<label for="phone"><b>Farmer's Contact No: </b></label>
-		<input type="tel" id="phone" name="phone" 
+		<input type="tel" id="phone" name="phone" class='phoneN'
    			 pattern="[1-9]{1}[0-9]{9}" 
-   			 placeholder="Enter your 10 digit phone Number" required/>
+   			 placeholder="Enter 10 digit phone" required/>
 		
 	</div><br> 
 
@@ -64,7 +64,7 @@
 	   </select>
      </div><br> 
 	
-	 
+<!-- 	 
 	<div class="field">
 		<label for="kind of animal vaccinated"> <b> Kind of Animal Vaccinated :  </b></label>
 		<select name='animaltype' id='animaltype' class='animaltype'>
@@ -74,7 +74,7 @@
 		    <option value="Goat">Goat</option> 
 	   </select>
      </div><br>
- 	
+ 	 -->
 
 	 
 	<div class="field">
@@ -91,45 +91,45 @@
 
 
 	 <div class="field">
-		<label for="Cnumber"><b>Vaccination's done in CATTLE   :</b></label>
-		<input type="number" id="CattleNo" min=0 max=10000 name="CattleNo" placeholder="Enter Cattle vaccination number" required/>
+		<label for="Cnumber"><b>Vaccination's done in CATTLE:</b></label>
+		<input type="number" id="CattleNo" class='cattlesV' min=0 max=10000 name="CattleNo" placeholder="Enter number" required/>
 		<small></small>
 	</div><br>
 	 
 		
 	<div class="field">
-		<label for="Bnumber"><b>Vaccination's done in BUFFALO:</b></label>
-		<input type="number" id="BuffaloNo" min=0 max=10000 name="BuffaloNo" placeholder="Enter Buffalo vaccine's number" required/>
+		<label for="Snumber"><b>Vaccination's done in BUFFALO:</b></label>
+		<input type="number" id="BuffaloNo" class='buffaloV'  min=0 max=10000 name="BuffaloNo" placeholder="Enter number" required/>
 		<small></small>
 	</div><br> 
 
 
 	
 	<div class="field">
-		<label for="Snumber"><b>Vaccination's done in  SHEEP    :</b></label>
-		<input type="number" id="SheepNo" min=0 max=10000 name="SheepNo" placeholder="Enter sheep vaccination number" required/>
+		<label for="Snumber"><b>Vaccination's done in SHEEP :</b></label>
+		<input type="number" id="SheepNo" class='goatsV' min=0 max=10000 name="SheepNo" placeholder="Enter number" required/>
 		<small></small>
 	</div><br> 
 
 	
 	<div class="field">
-		<label for="Gnumber"><b>Vaccination's done in  GOAT     :</b></label>
-		<input type="number" id="GoatNo" min=0 max=10000 name="GoatNo" placeholder="Enter goat vaccination number" required/>
+		<label for="Gnumber"><b>Vaccination's done in GOAT  :</b></label>
+		<input type="number" id="GoatNo" class='sheepsV' min=0 max=10000 name="GoatNo" placeholder="Enter number" required/>
 		<small></small>
 	</div><br> 
 
-
+ 
 
 
 		<div class="field">
 	        	<label for="Ename"> <b>Reporting Officer : </b></label>
-		         <input type="text" id="Ename" name="Ename" placeholder="Enter Reporting Officer Name" required/>
+		         <input type="text" id="Ename" class='Ename' name="Ename" placeholder="Enter Officer Name" required/>
 		          <small></small>
 		</div><br> 
 
          <div class="field">
-			<label > <b>  Designation     :            </b></label>
-			<select name="Designation">
+			<label > <b>  Designation  :   </b></label>
+			<select name="Designation" class ='Designation'>
 				<option value="ad"> AD </option>
  			    <option value="vas">VAS</option>
 			    <option value="vlo">VLO</option>
